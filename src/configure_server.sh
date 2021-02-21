@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo WORLD_NAME $WORLD_NAME
+echo PASSWORD $PASSWORD
