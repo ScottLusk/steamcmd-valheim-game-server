@@ -2,4 +2,4 @@
 
 cd ${STEAMAPPDIR}
 
-start /high valheim_server -nographics -batchmode -name "$WORLD_NAME" -port 2456 -world "$WORLD_NAME" -password "$PASSWORD"
+./valheim_server.x86_64 -nographics -batchmode -savedir "~/valheimserver/Storage" -name "$WORLD_NAME" -port 2456 -world "$WORLD_NAME" -password "$PASSWORD"

@@ -8,8 +8,11 @@ ENV STEAMAPPID 896660
 ENV STEAMAPPDIR /home/steam/valheimserver
 ENV STEAMSCRIPTDIR /home/steam/scripts
 
+ENV WORLD_NAME hello_world
+ENV PASSWORD password
+
 VOLUME [${STEAMAPPDIR}/Storage]
-EXPOSE 3000/udp 3001/tcp
+EXPOSE 2456-2458
 
 CMD ${STEAMSCRIPTDIR}/steam_update.sh && \
 	${STEAMSCRIPTDIR}/configure_server.sh && \
@@ -20,6 +23,7 @@ RUN apt-get update && \
 		locales \
 		libicu63 \
 		libgdiplus \
+		libsdl2-2.0-0 \
 		jq && \
 	sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen && locale-gen
 
