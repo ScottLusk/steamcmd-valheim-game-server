@@ -21,7 +21,7 @@ CMD ${STEAMSCRIPTDIR}/steam_update.sh && \
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends --no-install-suggests \
 		locales \
-		libicu63 \
+		libicu72 \
 		libgdiplus \
 		libsdl2-2.0-0 \
 		jq && \
