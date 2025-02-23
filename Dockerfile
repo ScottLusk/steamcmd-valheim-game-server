@@ -27,6 +27,6 @@ RUN apt-get update && \
 		jq && \
 	sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen && locale-gen
 
-ADD src ${STEAMSCRIPTDIR}
+ADD --chown=steam:steam --chmod=777 src ${STEAMSCRIPTDIR}
 
 RUN ${STEAMSCRIPTDIR}/steam_update.sh
